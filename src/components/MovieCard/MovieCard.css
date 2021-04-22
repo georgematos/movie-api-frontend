@@ -1,0 +1,40 @@
+.Card {
+  flex: 1;
+  margin: 10px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 250px;
+}
+
+.Card .Title {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0px;
+  font-size: 18px;
+  max-height: 100px;
+  min-height: 100px;
+}
+
+.Card .Content { 
+  display: flex;
+  flex: 1;
+  color: #000;
+  padding: 5px 0px;
+  min-height: 350px;
+  justify-content: center;
+}
+
+.Card img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.year {
+  font-size: 15px;
+  color: bisque;
+}

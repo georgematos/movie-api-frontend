@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input {
+  height: 40px;
+  max-width: 300px;
+  margin: auto;
+  background-color: rgb(156, 156, 156);
+}
