@@ -17,3 +17,7 @@ input {
   margin: auto;
   background-color: rgb(156, 156, 156);
 }
+
+.searchButton {
+  width: 140px;
+}
