@@ -2,6 +2,12 @@ body {
   display: flex;
   margin-top: 30px;
   justify-content: center;
+  color: #1ec4dc;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
 }
 
 .Cards {
@@ -9,6 +15,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  max-width: 1280px;
 }
 
 input {

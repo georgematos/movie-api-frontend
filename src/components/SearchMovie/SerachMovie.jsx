@@ -14,6 +14,8 @@ const SearchMovie = (props) => {
   const [firstLoad, setFirstLoad] = useState(true)
 
   const searchMovie = () => {
+    setMovies([])
+    setFirstLoad(true)
     fetch(`${Configs.urlApi}/search?name=${title}`)
       .then(res => res.json())
       .then(setLoading(true))
@@ -45,12 +47,14 @@ const SearchMovie = (props) => {
         <Loading></Loading>
       </If>
       <If test={movies}>
-        <div className="Cards">
-          {movies.map(m =>
-            <div key={m.id}>
-              <MovieCard title={m.title} year={m.year} poster={m.poster} />
-            </div>
-          )}
+        <div className="content">
+          <div className="Cards">
+            {movies.map(m =>
+              <div key={m.id}>
+                <MovieCard title={m.title} year={m.year} poster={m.poster} />
+              </div>
+            )}
+          </div>
         </div>
       </If>
       <If test={movies.length < 1 && !firstLoad}>

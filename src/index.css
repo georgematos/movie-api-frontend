@@ -1,9 +1,8 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 300;
+  background-image: url('./images/popcorns-color.jpeg');
   font-size: 2rem;
-  background-color: #444;
-  color: #fff;
   text-align: center;
 }
 
