@@ -1,6 +1,7 @@
 import './App.css';
-import SearchMovie from './components/SearchMovie/SerachMovie';
+// import SearchMovie from './components/SearchMovie/SerachMovie';
 import Icon from './components/Icon/Icon';
+import Routes from './routes';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       </header>
       <main>
         <div className="main-content">
-          <SearchMovie></SearchMovie>
+          <Routes />
         </div>
       </main>
       <footer className="text-center footer">

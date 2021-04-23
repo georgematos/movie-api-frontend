@@ -51,7 +51,7 @@ const SearchMovie = (props) => {
           <div className="Cards">
             {movies.map(m =>
               <div key={m.id}>
-                <MovieCard title={m.title} year={m.year} poster={m.poster} />
+                <MovieCard movie={m} />
               </div>
             )}
           </div>
