@@ -10,16 +10,13 @@ const MovieCard = (props) => {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
-
   const showDetails = () => {
     setLoading(true)
     fetch(`${Configs.urlApi}/movie?id=${props.movie.id}`)
       .then(res => res.json())
       .then((data) => {
-        setTimeout(() => {
-          setLoading(false)
-          history.push('/movie-details', {movie: data})
-        }, 1000);
+        setLoading(false)
+        history.push('/movie-details', {movie: data})
       })
       .catch(console.log)
   }

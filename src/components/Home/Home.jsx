@@ -20,11 +20,9 @@ const Home = (props) => {
     fetch(`${Configs.urlApi}/search?name=${title}`)
       .then(res => res.json())
       .then((data) => {
-        setTimeout(() => {
-          setMovies(data)
-          setLoading(false)
-          setFirstLoad(false)
-        }, 2000);
+        setMovies(data)
+        setLoading(false)
+        setFirstLoad(false)
       })
       .catch(console.log)
   }
@@ -38,11 +36,11 @@ const Home = (props) => {
   return (
     <div className="container home">
       <div className="input-group form">
-        <input 
-          className="form-control" 
+        <input
+          className="form-control"
           type="text"
           placeholder="Search your movies!"
-          onChange={(e) => setTitle(e.target.value)}onKeyDown={handleKeyDown} 
+          onChange={(e) => setTitle(e.target.value)} onKeyDown={handleKeyDown}
         />
         <button className="btn btn-primary" onClick={searchMovie}>Search!</button>
       </div>
