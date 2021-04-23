@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  max-width: 30rem;
+  margin: 25px;
+}
+
+.initial-page h2 {
+  font-size: 100px;
+  font-family: 'Pacifico';
+  color: #775eb8;
+  text-shadow: 0 0 6px #ffffff;
+}
+
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,12 +1,14 @@
 import React from 'react'
 import {Route, BrowserRouter} from 'react-router-dom'
 
-import SearchMovie from './components/SearchMovie/SerachMovie'
+import Home from './components/Home/Home'
+import MovieDetails from './components/MovieDetails/MovieDetails'
 
 function Routes() {
   return (
     <BrowserRouter>
-      <Route component={SearchMovie} path="/" exact />
+      <Route path="/" component={Home} exact />
+      <Route path="/movie-details" component={MovieDetails}  />
     </BrowserRouter>
   )
 }

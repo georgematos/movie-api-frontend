@@ -1,23 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MovieCard.css'
 import Configs from '../Helpers/Configs'
+import { useHistory } from 'react-router-dom'
+import Loading from '../Loading/Loading'
+import If from '../Helpers/If'
 
 const MovieCard = (props) => {
 
+  const [loading, setLoading] = useState(false)
+  const history = useHistory()
+
+
   const showDetails = () => {
-    console.log('clicou no ' + props.movie.title)
+    setLoading(true)
     fetch(`${Configs.urlApi}/movie?id=${props.movie.id}`)
-    .then(res => res.json())
-    // .then(setLoading(true))
-    .then((data) => {
-      setTimeout(() => {
-        console.log(data)
-        // setMovies(data)
-        // setLoading(false)
-        // setFirstLoad(false)
-      }, 2000);
-    })
-    .catch(console.log)
+      .then(res => res.json())
+      .then((data) => {
+        setTimeout(() => {
+          setLoading(false)
+          history.push('/movie-details', {movie: data})
+        }, 1000);
+      })
+      .catch(console.log)
   }
 
   return (
@@ -27,7 +31,14 @@ const MovieCard = (props) => {
         <div className="year">{props.movie.year}</div>
       </div>
       <div className="Content">
-        <img src={props.movie.poster} alt={props.movie.title}/>
+        <If test={loading}>
+          <div className="loading-movie">
+            <Loading></Loading>
+          </div>
+        </If>
+        <If test={!loading}>
+          <img src={props.movie.poster} alt={props.movie.title} />
+        </If>
       </div>
     </div>
   )

@@ -1,0 +1,38 @@
+.movie-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px rgb(146, 92, 247);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.main-info {
+  color: #4e1eb6;
+  text-align: center;
+}
+
+.poster {
+  margin: 20px;
+  border: solid 3px rgb(146, 92, 247);
+}
+
+.plot {
+  max-width: 20rem;
+  margin-bottom: 20px;
+}
+
+.more-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  max-width: 20rem;
+}
+
+
+ .attr {
+  font-size: large;
+  color: #4e1eb6;
+}
