@@ -8,7 +8,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 #### Configure server url API at src/components/Helpers/Configs.js
-#### The current target is localhost:8080
+#### The current target is reaching https://movierestapibackend.herokuapp.com/movieapi. Chenge to localhost:8080 to test with you local REST API.
 
 ## Available Scripts
 
