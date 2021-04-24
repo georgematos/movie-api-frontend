@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Configure server url API at src/components/Helpers/Configs.js
+The current target is localhost:8080
+
 ## Available Scripts
 
 In the project directory, you can run:
