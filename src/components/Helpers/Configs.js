@@ -1,5 +1,5 @@
 const Configs = {
-  urlApi: "http://localhost:8080/movieapi"
+  urlApi: "https://movierestapibackend.herokuapp.com/movieapi",
 }
 
 export default Configs
