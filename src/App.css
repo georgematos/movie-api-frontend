@@ -1,4 +1,28 @@
-.header {
+@media (max-width: 900px) {
+  .sticky-footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    background-color: #6644af;
+  }
+}
+
+@media (min-width: 600px) {
+  .sticky-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    background-color: #6644af;  
+  }
+}
+
+header {
   opacity: 80%;
   background-color: white;
   padding-top: 20px;
@@ -15,14 +39,4 @@
 
 .content {
   padding-bottom: 200px;
-}
-
-.sticky-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  color: white;
-  width: 100%;
-  background-color: #6644af;  
 }
