@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useMainContext } from '../Context/MainContext'
 import './Home.css'
 import If from '../Helpers/If'
 import MovieCard from '../MovieCard/MovieCard'
@@ -8,8 +9,9 @@ import Configs from '../Helpers/Configs'
 
 const Home = (props) => {
 
+  const {movies, setMovies} = useMainContext()
+
   const [title, setTitle] = useState("")
-  const [movies, setMovies] = useState([])
   const [loading, setLoading] = useState(false)
   const [firstLoad, setFirstLoad] = useState(true)
 
