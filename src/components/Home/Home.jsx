@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useMainContext } from '../Context/MainContext'
+import { useMainContext } from '../Context/MainAppContext'
 import './Home.css'
 import If from '../Helpers/If'
 import MovieCard from '../MovieCard/MovieCard'

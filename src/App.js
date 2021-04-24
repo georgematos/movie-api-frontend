@@ -1,12 +1,11 @@
 import './App.css';
 import Icon from './components/Icon/Icon';
 import Routes from './routes';
-import MainProvider from './components/Context/MainContext'
+import MainAppProvider from './components/Context/MainAppContext'
 
 function App() {
   return (
-    <MainProvider>
-
+    <MainAppProvider>
       <div className="container-fluid">
         <header className="header">
           <h1>Movie Search API</h1>
@@ -31,7 +30,7 @@ function App() {
           </div>
         </footer>
       </div>
-    </MainProvider>
+    </MainAppProvider>
   );
 }
 
