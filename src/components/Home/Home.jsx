@@ -63,11 +63,6 @@ const Home = (props) => {
           <NoMoviesFound></NoMoviesFound>
         </If>
       </div>
-      <If test={movies.length < 1 && !loading}>
-        <div className="initial-page">
-          <h2>Welcome</h2>
-        </div>
-      </If>
     </div>
   )
 
