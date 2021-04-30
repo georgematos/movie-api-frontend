@@ -12,7 +12,7 @@ const MovieCard = (props) => {
 
   const showDetails = () => {
     setLoading(true)
-    fetch(`${Configs.urlApi}/movie?id=${props.movie.id}`)
+    fetch(`${Configs.urlApi}/${props.movie.id}`)
       .then(res => res.json())
       .then((data) => {
         setLoading(false)

@@ -19,7 +19,7 @@ const Home = (props) => {
     setMovies([])
     setFirstLoad(true)
     setLoading(true)
-    fetch(`${Configs.urlApi}/search?name=${title}`)
+    fetch(`${Configs.urlApi}/search/${title}`)
       .then(res => res.json())
       .then((data) => {
         setMovies(data)
