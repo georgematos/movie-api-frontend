@@ -39,12 +39,13 @@ const Home = (props) => {
     <div className="container home">
       <div className="input-group form">
         <input
+          id="homeSearchBar"
           className="form-control"
           type="text"
           placeholder="Search your movies!"
           onChange={(e) => setTitle(e.target.value)} onKeyDown={handleKeyDown}
         />
-        <button className="btn btn-primary" onClick={searchMovie}>Search!</button>
+        <button id="homeSearchButton" className="btn btn-primary" onClick={searchMovie}>Search!</button>
       </div>
       <div>
         <If test={loading}>
