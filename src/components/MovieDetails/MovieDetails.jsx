@@ -13,7 +13,7 @@ const MovieDetails = (props) => {
     <div id="movieDetailsContent" className="container movie-content">
       <div className="main-info">
         <h1 id="movieDetailsTitle">{movie.title}</h1>
-        <h4>{movie.year}</h4>
+        <h4 id="movieDetailsYear">{movie.year}</h4>
         <h4>IMDB Rating: {movie.imdbRating}</h4>
       </div>
       <div className="poster">
@@ -24,7 +24,7 @@ const MovieDetails = (props) => {
       </div>
       <div className="more-info">
         <p><span className="attr">Runtime:</span> {movie.runtime}</p>
-        <p><span className="attr">Genre:</span> {movie.genre}</p>
+        <p id="movieDetailsGenre"><span className="attr">Genre:</span> {movie.genre}</p>
         <p><span className="attr">Director:</span> {movie.director}</p>
         <p><span className="attr">Writer:</span> {movie.writer}</p>
         <p><span className="attr">Actors:</span> {movie.actors}</p>
