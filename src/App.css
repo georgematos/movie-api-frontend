@@ -1,27 +1,23 @@
 @media (max-width: 900px) {
   .sticky-footer {
     position: relative;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    color: white;
-    width: 100%;
-    background-color: #6644af;
   }
 }
 
 @media (min-width: 600px) {
   .sticky-footer {
-    padding-top: 10px;
-    padding-bottom: 10px;
     position: fixed;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    color: white;
-    width: 100%;
-    background-color: #6644af;  
   }
+}
+
+.sticky-footer {
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+  background-color: #6644af;
 }
 
 header {
