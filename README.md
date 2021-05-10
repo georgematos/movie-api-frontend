@@ -1,7 +1,6 @@
 # This project was made with React Framework and the following auxiliar libraries:
 * react-router-dom
 * bootstrap
-* redux: not fully implemented
 
 ## Getting Started with Create React App
 
