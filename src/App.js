@@ -16,10 +16,6 @@ function App() {
         <footer className="footer sticky-footer">
           <Icon link="https://github.com/georgematos" class="fab fa-github" />
           <Icon link="https://www.linkedin.com/in/george-matos-373a8919a/" class="fab fa-linkedin" />
-          <Icon link="https://www.instagram.com/georgematos.o/" class="fab fa-instagram" />
-          <Icon link="https://www.facebook.com/faceDoGeorge/" class="fab fa-facebook" />
-          <Icon link="https://twitter.com/georgemattos" class="fab fa-twitter" />
-          <Icon link="#!" class="fab fa-google" />
 
           <div>Movie Search API is a small application that was made for a job interview at Instituto Atlântico</div>
           <div>© 2020 Copyright</div>
