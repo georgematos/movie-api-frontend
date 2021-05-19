@@ -1,0 +1,20 @@
+@media (max-width: 900px) {
+  .sticky-footer {
+    position: relative;
+  }
+}
+
+@media (min-width: 600px) {
+  .sticky-footer {
+    position: fixed;
+  }
+}
+.sticky-footer {
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+  background-color: #6644af;
+}

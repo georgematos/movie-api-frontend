@@ -4,7 +4,8 @@ import './NoMoviesFound.css'
 const NoMoviesFound = () => {
   return (
     <div className="nofound">
-      😔 No movies found 😔
+      <span className="icon">😔</span>
+      <p>No movies found</p>
     </div>
   )
 }

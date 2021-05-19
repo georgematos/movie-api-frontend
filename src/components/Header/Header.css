@@ -1,0 +1,14 @@
+header {
+  opacity: 80%;
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 100px;
+  font-family: 'Pacifico', cursive;
+  color: #6644af;
+}

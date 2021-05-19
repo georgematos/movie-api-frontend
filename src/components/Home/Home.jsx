@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { useMainContext } from '../Context/MainAppContext'
 import './Home.css'
-import If from '../Helpers/If'
-import MovieCard from '../MovieCard/MovieCard'
+import If from '../../Helpers/If'
+import DisplayCards from '../DisplayCards/DisplayCards'
 import Loading from '../Loading/Loading'
 import NoMoviesFound from '../NoMoviesFound/NoMoviesFound'
-import Configs from '../Helpers/Configs'
+import { getMovies } from '../../services/movieService'
 
-const Home = (props) => {
+const Home = () => {
 
-  const {movies, setMovies} = useMainContext()
+  const { movies, setMovies } = useMainContext()
 
   const [title, setTitle] = useState("")
   const [loading, setLoading] = useState(false)
@@ -19,14 +19,12 @@ const Home = (props) => {
     setMovies([])
     setFirstLoad(true)
     setLoading(true)
-    fetch(`${Configs.urlApi}/search/${title}`)
-      .then(res => res.json())
+    getMovies(title)
       .then((data) => {
         setMovies(data)
         setLoading(false)
         setFirstLoad(false)
       })
-      .catch(console.log)
   }
 
   const handleKeyDown = (e) => {
@@ -40,6 +38,7 @@ const Home = (props) => {
       <div className="input-group form">
         <input
           id="homeSearchBar"
+          role="search"
           className="form-control"
           type="text"
           placeholder="Search your movies!"
@@ -52,15 +51,7 @@ const Home = (props) => {
           <Loading></Loading>
         </If>
         <If test={movies}>
-          <div>
-            <div className="Cards">
-              {movies.map(m =>
-                <div key={m.id}>
-                  <MovieCard movie={m} />
-                </div>
-              )}
-            </div>
-          </div>
+          <DisplayCards movies={movies} />
         </If>
         <If test={movies.length < 1 && !firstLoad}>
           <NoMoviesFound></NoMoviesFound>

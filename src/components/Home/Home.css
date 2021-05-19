@@ -15,9 +15,3 @@
   color: #775eb8;
   text-shadow: 0 0 6px #ffffff;
 }
-
-.Cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}

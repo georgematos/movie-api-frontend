@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './MovieCard.css'
-import Configs from '../Helpers/Configs'
+import Configs from '../../Helpers/Configs'
 import { useHistory } from 'react-router-dom'
 import Loading from '../Loading/Loading'
-import If from '../Helpers/If'
+import If from '../../Helpers/If'
 
 const MovieCard = (props) => {
 
@@ -22,8 +22,8 @@ const MovieCard = (props) => {
   }
 
   return (
-    <div className="Card" onClick={showDetails}>
-      <div className="Title">
+    <div className="Card" role="card" onClick={showDetails}>
+      <div className="Title" data-testid={props.movie.id}>
         <div>{props.movie.title}</div>
         <div className="year">{props.movie.year}</div>
       </div>
