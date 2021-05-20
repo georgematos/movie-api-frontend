@@ -7,9 +7,9 @@ const DisplayCards = ({ movies }) => {
   return (
     <div>
       <div className="Cards">
-        {movies.map(m =>
-          <div key={m.id}>
-            <MovieCard movie={m} />
+        {movies.map(movie =>
+          <div key={movie.id}>
+            <MovieCard movie={movie} />
           </div>
         )}
       </div>

@@ -1,10 +1,16 @@
 import Configs from '../Helpers/Configs'
 import axios from 'axios';
 
-const getMovies = (title) => {
-  return axios
-    .get(`${Configs.urlApi}/search/${title}`)
-    .then(res => res.data)
+const getMovies = async (title) => {
+  const res = await axios
+    .get(`${Configs.urlApi}/search/${title}`);
+  return res.data;
 }
 
-export { getMovies }
+const getMovieDetails = async (movieId) => {
+  const res = await axios
+    .get(`${Configs.urlApi}/${movieId}`);
+  return res.data;
+}
+
+export { getMovies, getMovieDetails }

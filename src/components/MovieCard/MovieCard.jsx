@@ -4,6 +4,7 @@ import Configs from '../../Helpers/Configs'
 import { useHistory } from 'react-router-dom'
 import Loading from '../Loading/Loading'
 import If from '../../Helpers/If'
+import { getMovieDetails } from '../../services/movieService'
 
 const MovieCard = (props) => {
 
@@ -12,8 +13,7 @@ const MovieCard = (props) => {
 
   const showDetails = () => {
     setLoading(true)
-    fetch(`${Configs.urlApi}/${props.movie.id}`)
-      .then(res => res.json())
+    getMovieDetails(props.movie.id)
       .then((data) => {
         setLoading(false)
         history.push('/movie-details', {movie: data})

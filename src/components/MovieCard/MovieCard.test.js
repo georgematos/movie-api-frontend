@@ -1,18 +1,17 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import DisplayCards from './DisplayCards'
-import MovieCard from '../MovieCard/MovieCard'
+import MovieCard from './MovieCard'
 
-import { getMovies } from '../../../__mocks__/fakeAPI'
+import { getMovie } from '../../../__mocks__/fakeAPI'
 
-describe('DisplayCard test', () => {
+describe('MovieCard test', () => {
 
-  test('should render a movie card', async () => {
+  test('should show a card with title and year of a movie', async () => {
 
-    const movies = await getMovies()
+    const movie = await getMovie()
 
     render(
-      <DisplayCards movies={movies.data} />
+      <MovieCard movie={movie.data} />
     )
 
     const card = screen.queryByTestId("tt0076759")
@@ -27,8 +26,4 @@ describe('DisplayCard test', () => {
 
   })
 
-  // TODO
-  // test('should show No movies found if an invalid title is passed', async () => {
-
-  // })
 })
