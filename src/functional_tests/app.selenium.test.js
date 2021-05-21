@@ -19,8 +19,6 @@ describe('run functional tests', () => {
 				.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div/div[2]/div/div/div[2]/div/div[1]/div[1]"))
 		const movie3 = await driver
 				.findElement(By.xpath("//*[@id=\"root\"]/div/div/main/div/div[2]/div/div/div[3]/div/div[1]/div[1]"))
-
-    console.log(await movie1.getText())
     
 		expect(await movie1.getText()).toBe("Star Wars: Episode IV - A New Hope")
     expect(await movie2.getText()).toBe("Star Wars: Episode V - The Empire Strikes Back")
