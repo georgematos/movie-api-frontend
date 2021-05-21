@@ -1,6 +1,15 @@
-const { Builder, By, ExpectedConditions, Key, wait, until } = require('selenium-webdriver')
+const { Builder, By, until } = require('selenium-webdriver')
+const chrome = require('selenium-webdriver/chrome')
 
-const driver = new Builder().forBrowser("chrome").build()
+const screenSize = {
+  width: 1280,
+  height: 720
+}
+
+const driver = new Builder()
+  .forBrowser("chrome")
+  .setChromeOptions(new chrome.Options().headless().windowSize(screenSize))
+  .build()
 
 describe('run functional tests', () => {
 
